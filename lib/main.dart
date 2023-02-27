@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginui/src/utils/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          brightness: Brightness.light,
-          primarySwatch: const MaterialColor(0xFFFFE200, <int, Color>{
-            50: Color(0xFFFFE200),
-          })),
+      theme: TAppTheme.lightTheme,
 
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.system, //thememode
       home: const AppHome(),
     );

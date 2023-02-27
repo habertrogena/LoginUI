@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:loginui/src/utils/theme/widget_themes/text_theme.dart';
 
 class TAppTheme {
+  TAppTheme._();
+
   static ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
-      primarySwatch: const MaterialColor(0xFFFFE200, <int, Color>{
-        50: Color(0X1AFFE200),
-        100: Color(0X33FFE200),
-      }));
-  static ThemeData darkTheme = ThemeData();
+      textTheme: TTextTheme.lightTextTheme,
+      elevatedButtonTheme:
+          ElevatedButtonThemeData(style: ElevatedButton.styleFrom()));
+
+  static ThemeData darkTheme = ThemeData(brightness: Brightness.dark);
 }
