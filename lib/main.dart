@@ -10,9 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: const MaterialColor(0xFFFFE200, <int, Color>{
+            50: Color(0xFFFFE200),
+          })),
+
       darkTheme: ThemeData(brightness: Brightness.dark),
-      themeMode: ThemeMode.dark, //thememode
+      themeMode: ThemeMode.system, //thememode
       home: const AppHome(),
     );
   }
@@ -31,9 +36,12 @@ class AppHome extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: ListView(
           children: [
-            const Text("Heading"),
-            const Text("sub-heading"),
-            const Text("paragraph"),
+            Text(
+              "Heading",
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text("sub-heading", style: Theme.of(context).textTheme.titleSmall),
+            Text("paragraph", style: Theme.of(context).textTheme.bodyMedium),
             ElevatedButton(
               onPressed: () {},
               child: const Text("Eleveted button"),
