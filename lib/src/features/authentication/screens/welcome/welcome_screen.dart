@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:loginui/src/constants/colors.dart';
 import 'package:loginui/src/constants/image_string.dart';
 import 'package:loginui/src/constants/sizes.dart';

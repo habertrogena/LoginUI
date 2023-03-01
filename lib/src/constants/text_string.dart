@@ -13,6 +13,12 @@ const String tSignUp = "SignUp";
 
 // login screen text
 const String tLoginTittle = "welcome back!";
-const String tSubTittle = " Easy ,Fast And Efficient";
+const String tLoginSubTittle = " Easy ,Fast And Efficient";
 const String tRememberMe = "Remember Me?";
 const String tAlreadyHaveAnAccount = "Alraedy Have An Account?";
+
+// form text strings
+const String tEmail = "email";
+const String tEmailHint = "xyz@gmail.com";
+const String tPassword = "password";
+const String tForgetPassword = "forget password?";
