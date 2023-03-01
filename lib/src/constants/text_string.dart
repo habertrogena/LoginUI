@@ -30,3 +30,6 @@ const String tSignUpSubTitle =
     "Create Your Profile To Start Your Journey With Us";
 const String tAlreadyHaveAnAccount = "Alraedy Have An Account?";
 const String tSignInWithGoogle = "Sign IN With Google";
+
+//form
+const String tFullName = "full names";
