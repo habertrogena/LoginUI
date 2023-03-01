@@ -15,10 +15,18 @@ const String tSignUp = "SignUp";
 const String tLoginTittle = "welcome back!";
 const String tLoginSubTittle = " Easy ,Fast And Efficient";
 const String tRememberMe = "Remember Me?";
-const String tAlreadyHaveAnAccount = "Alraedy Have An Account?";
+
+const String tDontHaveAnAccount = "Dont Have An Account?";
 
 // form text strings
 const String tEmail = "email";
 const String tEmailHint = "xyz@gmail.com";
 const String tPassword = "password";
 const String tForgetPassword = "forget password?";
+
+// sign up screen text
+const String tSignUpTitle = "Lets Get Started";
+const String tSignUpSubTitle =
+    "Create Your Profile To Start Your Journey With Us";
+const String tAlreadyHaveAnAccount = "Alraedy Have An Account?";
+const String tSignInWithGoogle = "Sign IN With Google";

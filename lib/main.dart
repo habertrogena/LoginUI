@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginui/src/features/authentication/screens/splash_screen/splash_screen.dart';
-import 'package:loginui/src/features/authentication/screens/welcome/welcome_screen.dart';
+import 'package:loginui/src/features/authentication/screens/login/login_screen.dart';
 import 'package:loginui/src/utils/theme/theme.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
         themeMode: ThemeMode.system, //thememode
-        home: const WelcomeScreen());
+        home: const LoginScreen());
   }
 }
 
