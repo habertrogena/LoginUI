@@ -10,3 +10,9 @@ const String tWelcomeSubTitle =
 //generic text
 const String tLogin = "Login";
 const String tSignUp = "SignUp";
+
+// login screen text
+const String tLoginTittle = "welcome back!";
+const String tSubTittle = " Easy ,Fast And Efficient";
+const String tRememberMe = "Remember Me?";
+const String tAlreadyHaveAnAccount = "Alraedy Have An Account?";
