@@ -46,7 +46,10 @@ class LoginForm extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: null,
-                child: Text(tForgetPassword),
+                child: Text(
+                  tForgetPassword,
+                  style: TextStyle(color: Colors.blue),
+                ),
               ),
             ),
             SizedBox(
@@ -60,20 +63,6 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(
               height: 20,
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text.rich(
-                TextSpan(
-                    text: tDontHaveAnAccount,
-                    style: Theme.of(context).textTheme.bodySmall,
-                    children: const [
-                      TextSpan(
-                        text: tSignUp,
-                        style: TextStyle(color: Colors.blue),
-                      )
-                    ]),
-              ),
             ),
           ],
         ),
