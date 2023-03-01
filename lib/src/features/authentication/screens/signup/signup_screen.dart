@@ -35,11 +35,19 @@ class SignUp extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const Text.rich(
+                      child: Text.rich(
                         TextSpan(
                           children: [
-                            TextSpan(text: tAlreadyHaveAnAccount),
-                            TextSpan(text: tLogin)
+                            const TextSpan(
+                              text: tAlreadyHaveAnAccount,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.black),
+                            ),
+                            TextSpan(
+                              text: tLogin.toUpperCase(),
+                              style: const TextStyle(
+                                  color: Colors.red, fontSize: 20),
+                            )
                           ],
                         ),
                       ),
