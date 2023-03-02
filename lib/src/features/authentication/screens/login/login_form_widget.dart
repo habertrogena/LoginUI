@@ -42,16 +42,73 @@ class LoginForm extends StatelessWidget {
             const SizedBox(
               height: tFormHeight - 20,
             ),
-            const Align(
+            // --FORGET PASSWORD BTN
+            Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: null,
-                child: Text(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) => Container(
+                      padding: const EdgeInsets.all(tDefaultSize),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            tForgetPasswordTitle,
+                            style: TextStyle(fontSize: 20, color: Colors.red),
+                          ),
+                          const Text(
+                            tForgetPasswordSubTitle,
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          const SizedBox(
+                            height: 30.0,
+                          ),
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              padding: const EdgeInsets.all(20.0),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  color: Colors.grey.shade200),
+                              child: Row(
+                                children: [
+                                  const Icon(
+                                    Icons.mail_outline_rounded,
+                                    size: 60,
+                                  ),
+                                  const SizedBox(
+                                    width: 10.0,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        tEmail.toUpperCase(),
+                                      ),
+                                      const Text(tResetViaEmail)
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                },
+                child: const Text(
                   tForgetPassword,
                   style: TextStyle(color: Colors.blue),
                 ),
               ),
             ),
+
+            //--LOGIN BUTTON
+
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
