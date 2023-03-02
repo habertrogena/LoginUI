@@ -33,3 +33,16 @@ const String tSignInWithGoogle = "Sign IN With Google";
 
 //form
 const String tFullName = "full names";
+
+// forget password text
+
+const String tForgetPasswordTitle = 'Make Selection';
+const String tForgetPasswordSubTitle =
+    'select one of the options given to reset your password';
+const String tResetViaEmail = ' Reset Via Email Verification';
+const String tResetViaPhone = 'reset via phone verification';
+
+// -- forget password via phone text
+const String tForgetPhoneSubTitle =
+    "Enter your registered phone number to recieve OTP";
+const String tForgetMailSubTitle = 'Enter your registered email to recieve OTP';
