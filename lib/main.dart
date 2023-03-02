@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loginui/src/features/authentication/screens/login/login_screen.dart';
-import 'package:loginui/src/features/authentication/screens/signup/signup_screen.dart';
+import 'package:get/get.dart';
+import 'package:loginui/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:loginui/src/utils/theme/theme.dart';
 
 void main() {
@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         theme: TAppTheme.lightTheme,
         darkTheme: TAppTheme.darkTheme,
         themeMode: ThemeMode.system, //thememode
-        home: const LoginScreen());
+        home: const WelcomeScreen());
   }
 }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:loginui/src/constants/colors.dart';
-import 'package:loginui/src/constants/image_string.dart';
 import 'package:loginui/src/constants/sizes.dart';
 import 'package:loginui/src/constants/text_string.dart';
+import 'package:loginui/src/features/authentication/screens/login/login_screen.dart';
+import 'package:loginui/src/features/authentication/screens/signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -25,7 +25,13 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()),
+                      );
+                    },
                     style: OutlinedButton.styleFrom(
                       shape: const RoundedRectangleBorder(),
                       foregroundColor: tSecondaryColor,
@@ -43,7 +49,12 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SignUp()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: const RoundedRectangleBorder(),
                       foregroundColor: tSecondaryColor,
