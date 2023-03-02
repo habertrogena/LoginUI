@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginui/src/features/authentication/screens/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_string.dart';
@@ -47,58 +48,7 @@ class LoginForm extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  showModalBottomSheet(
-                    context: context,
-                    builder: (context) => Container(
-                      padding: const EdgeInsets.all(tDefaultSize),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            tForgetPasswordTitle,
-                            style: TextStyle(fontSize: 20, color: Colors.red),
-                          ),
-                          const Text(
-                            tForgetPasswordSubTitle,
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          const SizedBox(
-                            height: 30.0,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              padding: const EdgeInsets.all(20.0),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  color: Colors.grey.shade200),
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.mail_outline_rounded,
-                                    size: 60,
-                                  ),
-                                  const SizedBox(
-                                    width: 10.0,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        tEmail.toUpperCase(),
-                                      ),
-                                      const Text(tResetViaEmail)
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  );
+                  ForgetPasswordScreen.buildShowModalBottomSheet(context);
                 },
                 child: const Text(
                   tForgetPassword,
