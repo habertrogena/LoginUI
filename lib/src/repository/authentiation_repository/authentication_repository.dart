@@ -38,4 +38,6 @@ class AuthenticationRepository extends GetxController {
     } on FirebaseException catch (e) {
     } catch (_) {}
   }
+
+  Future<void> logout() async => await _auth.signOut();
 }
