@@ -8,4 +8,7 @@ class SignUpController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   final fullName = TextEditingController();
+
+  // call this function from the design and it will do the rest
+  void registerUser(String email, String password) {}
 }
