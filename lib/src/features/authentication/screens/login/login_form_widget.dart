@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:loginui/src/features/authentication/screens/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
 
@@ -5,9 +6,16 @@ import '../../../../constants/sizes.dart';
 import '../../../../constants/text_string.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({
+  LoginForm({
     super.key,
   });
+
+  final _formkey = GlobalKey<FormState>();
+  final FirebaseAuth_auth = FirebaseAuth.instance;
+
+  // text editing controllers
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +26,7 @@ class LoginForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: emailController, //addition
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
                 labelText: tEmail,
@@ -29,6 +38,7 @@ class LoginForm extends StatelessWidget {
               height: tFormHeight,
             ),
             TextFormField(
+              controller: passwordController,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint),
                 labelText: tPassword,
@@ -62,7 +72,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {},
                 child: Text(
                   tLogin.toUpperCase(),
                 ),
