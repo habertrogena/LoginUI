@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:loginui/src/features/authentication/screens/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
+import 'package:loginui/src/firebaseAuth/firebase_auth_service.dart';
 
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_string.dart';
@@ -26,7 +27,7 @@ class LoginForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
-              controller: emailController, //addition
+              keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
                 labelText: tEmail,
@@ -38,7 +39,8 @@ class LoginForm extends StatelessWidget {
               height: tFormHeight,
             ),
             TextFormField(
-              controller: passwordController,
+              keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint),
                 labelText: tPassword,
@@ -72,7 +74,11 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () async {},
+                onPressed: () async {
+                  //test
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Processing data')));
+                },
                 child: Text(
                   tLogin.toUpperCase(),
                 ),
